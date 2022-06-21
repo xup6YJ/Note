@@ -1,0 +1,11 @@
+conda create -n env_name python=3.7 anaconda
+
+pip install tensorflow-gpu
+conda install tensorflow-gpu
+
+import tensorflow as tf
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
+
+tf.test.gpu_device_name()
+tf.test.is_gpu_available()
